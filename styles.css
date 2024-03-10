@@ -1,0 +1,363 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: 'Courier New', monospace; /* Altera a fonte para uma fonte de código */
+}
+
+body {
+	overflow: hidden;
+	background-image: url('https://i.ibb.co/1bMzBmZ/457b40ee8a7a4a1612cb438ffb883efc.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: lime; /* Cor verde típica de código hacker */
+}
+
+/* Estilos gerais */
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: 'Courier New', monospace;
+}
+
+/* Animação de entrada */
+.opening-animation {
+	text-align: center;
+	animation: fade-in 3s ease-in-out;
+	color: lime; /* Cor verde típica de código hacker */
+}
+
+/* Estilos do container de login */
+.login-container {
+	background-color: transparent; /* Cor de fundo preta */
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-top: 20px;
+	text-align: center;
+}
+
+.login-container h2 {
+	margin-bottom: 10px;
+	color: lime; /* Cor verde típica de código hacker */
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid lime; /* Cor verde típica de código hacker */
+	border-radius: 5px;
+	background-color: #82B8B1; /* Cor de fundo preta */
+	color: lime; /* Cor verde típica de código hacker */
+}
+
+button {
+	background-color: #0FCAB2;
+	border: none;
+	color: lime; /* Cor verde típica de código hacker */
+	padding: 10px 20px;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: greenyellow;
+	transform: scale(1.05);
+}
+
+/* Estilos do container de notificações */
+.notification-container {
+	margin-top: 20px;
+}
+
+.notification-popup {
+	display: none;
+	background-color: #000; /* Cor de fundo preta */
+	border: 1px solid lime; /* Cor verde típica de código hacker */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	padding: 10px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+/* Estilos do conteúdo do usuário */
+.user-content {
+	display: none;
+	background-color: transparent; /* Cor de fundo preta */
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-top: 20px;
+	text-align: center;
+}
+
+.user-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.user-header p {
+	font-size: 18px;
+	color: lime; /* Cor verde típica de código hacker */
+}
+
+.user-options {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+.square {
+	background-color: #502525;
+	color: lime; /* Cor verde típica de código hacker */
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: transform 0.3s, background-color 0.3s;
+}
+
+.square:hover {
+	background-color: #000000;
+	transform: scale(1.05);
+}
+
+#logoutBtn {
+	background-color: #d9534f;
+	border: none;
+	color: lime; /* Cor verde típica de código hacker */
+	padding: 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  overflow: hidden;
+  height: 3rem;
+  background-size: 300% 300%;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+#container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+
+strong {
+  z-index: 2;
+  font-family: 'Avalors Personal Use';
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #FFFFFF;
+  text-shadow: 0 0 4px white;
+}
+
+#glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+
+.circle:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+
+.btn:hover #container-stars {
+  z-index: 1;
+  background-color: #212121;
+}
+
+.btn:hover {
+  transform: scale(1.1)
+}
+
+.btn:active {
+  border: double 4px #FE53BB;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+.btn:active .circle {
+  background: #FE53BB;
+}
+
+#stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+
+#stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+#stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+
+#stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-135rem);
+  }
+}
+
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+div{
+  color:#7AE3D5;
+  background-color: transparent;
+  border-radius: 20px;
+  font-size:20px;
+}
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+width: 159px;
+      height: 150px;
+      border: solid 1px #fff;
+      border-radius: 50px;
+}
+a {
+  text-decoration: none;
+  border:3px 20% 50px black;
+  background-color: white;
+  border-radius: 30px;
+  color:black;
+  text-align: center;
+}
+.card {
+  max-width: 300px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  max-width: 500px;
+  height: 300px;
+  padding: 35px;
+
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 5px 50px green;
+}
+
+.card-footer {
+  font-size: 0.65em;
+  color: black;
+  
+}
